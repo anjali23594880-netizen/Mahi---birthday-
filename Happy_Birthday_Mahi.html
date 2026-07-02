@@ -1,0 +1,26 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Happy Birthday Mahi</title>
+<style>
+body{margin:0;font-family:Arial;background:linear-gradient(135deg,#7b2ff7,#f107a3);color:white;display:flex;justify-content:center;align-items:center;min-height:100vh;text-align:center;overflow:hidden}
+.card{background:rgba(255,255,255,.12);padding:30px;border-radius:20px;max-width:700px}
+h1{font-size:3em}button{padding:14px 24px;border:none;border-radius:30px;font-size:18px;cursor:pointer}
+#msg{display:none;margin-top:20px;font-size:1.2em}
+.heart{position:absolute;animation:float 8s linear infinite;opacity:.7}
+@keyframes float{from{transform:translateY(100vh)}to{transform:translateY(-10vh)}}
+</style></head><body>
+<div class="card">
+<h1>🎉 Happy Birthday Mahi! 🎂</h1>
+<h2>To My Bestie 💜</h2>
+<p>Wishing you endless happiness, success and smiles.</p>
+<button onclick="surprise()">🎁 Open Your Surprise</button>
+<div id="msg">
+<p><b>Dear Mahi,</b><br><br>
+Thank you for being such an amazing bestie. You are one of the most precious people in my life. May all your dreams come true and may your smile always shine as brightly as it does today. No matter where life takes us, you'll always have a special place in my heart.<br><br>
+💖 Happy Birthday, Bestie! Keep shining forever. 💖</p>
+<audio id="music" controls autoplay>
+<source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+</div></div>
+<script>
+for(let i=0;i<30;i++){let d=document.createElement('div');d.className='heart';d.textContent='💖';d.style.left=Math.random()*100+'vw';d.style.animationDelay=(Math.random()*8)+'s';document.body.appendChild(d);}
+function surprise(){document.getElementById('msg').style.display='block';document.getElementById('music').play().catch(()=>{});}
+</script></body></html>
